@@ -1,0 +1,88 @@
+/** Globals **/
+table{ border-collapse: collapse !important; margin: 0 auto; width: 100%;}
+.nav ul li {list-style: none;}
+ul {margin: 0;padding: 0;}
+
+/** base.html - navigation **/
+* html .nav li {float: left;}
+.nav {font-family: Helvetica,Arial,sans-serif; font-weight: bold; font-size: 140%; }
+.nav a {display: block; float: left; padding: 0 1em 0 0;}
+.rtl .nav a {float: right;}
+
+.nav .first {padding-left: 0;}
+.rtl .nav .first {padding-right: 0;}
+
+.active {text-decoration: none; color: black;}
+
+.subnav{line-height: 27px; height: 27px; background: #424142; font-weight: bold; font-size: 0.95em; padding: 3px 0; margin-bottom: 15px; border-bottom: 5px solid #99CC00;}
+.subnav a, .subnav span{margin: 0 1.5em; padding: 3px 0.2em; -moz-border-radius: 3px; font-size: 1.2em; color: white; text-decoration: none;}
+.subnav span{color: black;}
+.subnav a:hover {background: #5A5A5A;}
+.subnav .active,.subnav .active:hover {background: #EB4C07; color: #fff;}
+
+/** base.html - Global Containers **/
+#header .logo a {text-decoration:none; font-size: 75px; color: black; width: 600px; height: 70px}
+
+#content {background-color: #fff; min-height: 330px;}
+
+#footer {text-align:center; background: #fff;}
+
+/** site/catalogs.inc - Catalogs **/
+#content .catalog .item-title, #content .catalog .item-tags {background: #000; color: #fff; text-decoration: none; display: block; text-align: center; line-height: 2em; height: 2em;}
+#content .catalog li {display: block; min-height: 125px; position: relative; margin: 1px;}
+.item-thumb img{max-width: 125px; max-height: 125px;}
+.item-thumb {float: left; width: 125px; overflow: hidden;}
+.rtl .item-thumb {float: right;}
+
+#content .catalog {clear: both;}
+.horizontal .item-title, .horizontal .item-tags {width: 125px;}
+.horizontal li {float: left; width: 125px;}
+.rtl .horizontal li {float: right;} 
+
+.horizontal .item-title, .horizontal .item-tags {float: left; }
+.rtl .horizontal .item-title, .rtl .horizontal .item-tags {float: right; }
+
+.listdetails li {clear: left;}
+.rtl .listdetails li {clear: right;}
+
+.rss {display: block; clear: both;}
+.item-sub-title {text-decoration: none; color: #fff;}
+.news .item-sub-title, .horizontal .item-sub-title {display: none;}
+
+/** site/galleria.html **/
+.galleria{list-style:none;width:100%}
+.galleria li{display:block;width:80px;height:80px;overflow:hidden;float:left;margin:0 10px 10px 0}
+.galleria li a{display:none}
+.galleria li div{position:absolute;display:none;top:0;left:180px}
+.galleria li div img{cursor:pointer}
+.galleria li.active div img,.galleria li.active div{display:block}
+.galleria li img.thumb{cursor:pointer;top:auto;left:auto;display:block;width:auto;height:auto}
+.galleria li .caption{display:block;padding-top:.5em;}
+* html .galleria li div span{width:400px} /* MSIE bug */
+
+.galleria li{width:68px;height:50px;border:3px double #111;margin: 2px;background:#000;}
+.galleria li div{left:240px}
+.galleria li div .caption{}
+.caption{font-style:italic;color:#887; background: transparent;}
+#main_image{margin:0 auto 60px;height:438px;width:100%;}
+#main_image img{margin-bottom:10px; max-width: 700px; max-height: 438px;}
+#main_image .galleria_wrapper {height: 438px;} 
+.gallery_nav{padding-top:15px;clear:both;font:80% 'helvetica neue',sans-serif;letter-spacing:3px;text-transform:uppercase;}
+.t_galleria #content {text-align: center;} 
+
+/** site/item.html **/
+.t_item h2 {text-align: center;}
+.t_item .item_wrap a {text-align: center; display: block;}
+.t_item .item_wrap img {max-width: 671px; margin: 0 auto; }
+.t_item .item-sub-title{font-weight:bold;}
+
+/** Patterns **/
+body {background: #000 url({{ pack.bgbody.get_file }}) no-repeat center 0; color: #fff;}
+#content {background: transparent; padding-top: 10px;}
+#footer {background: transparent;}
+#header .logo a, a, .active,h1,h2,h3,h4,h5,h6{color: #fff;}
+#header .logo a{font-size:70px;}
+.nav {padding: 20px 0 0 8px}
+#content .catalog .item-title, #content .catalog .item-tags{background: transparent url({{ pack.bg_trans.get_file }}) repeat;}
+a:hover{color: #6598B8;}
+a.active{color: #6598B8;}
